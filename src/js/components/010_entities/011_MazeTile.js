@@ -48,8 +48,11 @@ MazeGame.Tiles = MazeGame.Tiles || {};
             return neighbour;
         },
         getNeighbours: function (nameFilter) {
-            var neighbours = [];
-            for(var dir in MazeGame.Direction.getValues()){
+            var neighbours = {};
+            var values = MazeGame.Direction.getValues();
+            for(var dir in values){
+                if (!values.hasOwnProperty(dir))
+                    continue;
                 var nb = this.getNeighbour(dir);
                 if (nb && (!nameFilter || nb.tileName === nameFilter))
                     neighbours[dir] = nb;

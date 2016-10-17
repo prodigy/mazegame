@@ -12,3 +12,12 @@
   max-height: $tileSize*$gameSize;
   line-height: 0;
 }
+#tiles-wrapper {
+  position: relative;
+}
+#inventory{
+  position: relative;
+  width: $tileSize*$gameSize;
+  height: $tileSize;
+  line-height: 32px;
+}

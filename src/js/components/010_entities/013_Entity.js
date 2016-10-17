@@ -26,6 +26,8 @@ MazeGame.Entities = MazeGame.Entities || {};
         this._lastFrameUpdate = new Date().getTime();
 
         this._walkingTimeout = null;
+
+        this.game.setEntityPosition(this);
     };
 
     MazeGame.Entities.Entity.lastEntityId = 0;
@@ -52,6 +54,7 @@ MazeGame.Entities = MazeGame.Entities || {};
             if (this.domElement == null) {
                 this.domElement = document.createElement('div');
                 this.container.appendChild(this.domElement);
+                this.domElement.id = '_entity_'+this.entityId;
             }
             var cssClass = this.getTextureClass();
             if (this.domElement.className !== cssClass)
@@ -60,6 +63,7 @@ MazeGame.Entities = MazeGame.Entities || {};
             var posY = this.position.y * 32;
             this.domElement.setAttribute('style', 'transform: translate('+posX+'px,'+posY+'px)');
         },
+        onEntityCollide: function (entities) { },
 
         move: function (direction) {
             direction = MazeGame.Direction[MazeGame.Direction[direction]];
@@ -71,7 +75,7 @@ MazeGame.Entities = MazeGame.Entities || {};
                 var _this = this;
                 setTimeout(function(){
                     _this.game.maze.getTile(newPos.x, newPos.y).onTileEnter(_this);
-                }, 50);
+                }, 175);
                 this.isMoving = true;
                 if(this._walkingTimeout)
                     clearTimeout(this._walkingTimeout);

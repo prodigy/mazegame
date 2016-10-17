@@ -129,3 +129,25 @@
     @include stitches-sprite(0, -352px, 32px, 32px);
   }
 }
+
+.entity {
+  background: url('/assets/gfx/entities.png') no-repeat;
+  display: block;
+
+  &.entity-door-closed {
+    @include stitches-sprite(0, 0, 32px, 32px);
+  }
+
+  &.entity-door-maze {
+    @include stitches-sprite(0, -32px, 32px, 32px);
+  }
+
+  &.entity-door-open {
+    @include stitches-sprite(0, -64px, 32px, 32px);
+  }
+
+  &.entity-key {
+    @include stitches-sprite(0, -96px, 32px, 32px);
+  }
+}
+

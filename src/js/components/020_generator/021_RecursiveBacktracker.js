@@ -81,8 +81,9 @@ MazeGame.Generators = MazeGame.Generators || {};
 
                 stack.push({x: posX, y: posY});
             } else {
-                if(isFunction(onDeadEnd))
+                if(isFunction(onDeadEnd)) {
                     onDeadEnd.call(game, posX, posY);
+                }
 
                 var back = stack.pop();
                 posX = back.x;
@@ -95,16 +96,6 @@ MazeGame.Generators = MazeGame.Generators || {};
         // Set exit tile.
         var exitTile = new MazeGame.Tiles.FloorTile(maze, maze.width-2, maze.height-1);
         exitTile.onTileEnter = function () {
-            while(game.playersWrapper.firstChild) {
-                game.playersWrapper.removeChild(game.playersWrapper.firstChild);
-            }
-            while(game.entitiesWrapper.firstChild) {
-                game.entitiesWrapper.removeChild(game.entitiesWrapper.firstChild);
-            }
-            while(game.tilesWrapper.firstChild) {
-                game.tilesWrapper.removeChild(game.tilesWrapper.firstChild);
-            }
-
             game.remove();
             game = new MazeGame.Game(game.width, game.height);
         };

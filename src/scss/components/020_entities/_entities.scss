@@ -1,3 +1,11 @@
 .entity {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 250ms linear;
+}
+
+#inventory .entity {
+  position: relative;
   transition: transform 250ms linear;
 }

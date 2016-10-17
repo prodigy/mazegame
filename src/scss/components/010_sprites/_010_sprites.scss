@@ -1,0 +1,131 @@
+@mixin stitches-sprite($x, $y, $width, $height){
+  background-position: $x $y;
+  width: $width;
+  height: $height;
+}
+
+.tile {
+  background: url('/assets/gfx/spritesheet.png') no-repeat;
+  display: inline-block;
+
+  &.tile-floor {
+    @include stitches-sprite(0, 0, 32px, 32px);
+  }
+
+  &.tile-wall-d {
+    @include stitches-sprite(0, -32px, 32px, 32px);
+  }
+
+  &.tile-wall-l {
+    @include stitches-sprite(0, -64px, 32px, 32px);
+  }
+
+  &.tile-wall-ld {
+    @include stitches-sprite(0, -96px, 32px, 32px);
+  }
+
+  &.tile-wall-lr {
+    @include stitches-sprite(0, -128px, 32px, 32px);
+  }
+
+  &.tile-wall-lrd {
+    @include stitches-sprite(0, -160px, 32px, 32px);
+  }
+
+  &.tile-wall-r {
+    @include stitches-sprite(0, -192px, 32px, 32px);
+  }
+
+  &.tile-wall-rd {
+    @include stitches-sprite(0, -224px, 32px, 32px);
+  }
+
+  &.tile-wall-single {
+    @include stitches-sprite(0, -256px, 32px, 32px);
+  }
+
+  &.tile-wall-u {
+    @include stitches-sprite(0, -288px, 32px, 32px);
+  }
+
+  &.tile-wall-ud {
+    @include stitches-sprite(0, -320px, 32px, 32px);
+  }
+
+  &.tile-wall-ul {
+    @include stitches-sprite(0, -352px, 32px, 32px);
+  }
+
+  &.tile-wall-uld {
+    @include stitches-sprite(0, -384px, 32px, 32px);
+  }
+
+  &.tile-wall-ulr {
+    @include stitches-sprite(0, -416px, 32px, 32px);
+  }
+
+  &.tile-wall-ulrd {
+    @include stitches-sprite(0, -448px, 32px, 32px);
+  }
+
+  &.tile-wall-ur {
+    @include stitches-sprite(0, -480px, 32px, 32px);
+  }
+
+  &.tile-wall-urd {
+    @include stitches-sprite(0, -512px, 32px, 32px);
+  }
+}
+
+.entity.player {
+  background: url('/assets/gfx/player.png') no-repeat;
+  display: block;
+
+  &.player-d0 {
+    @include stitches-sprite(0, 0, 32px, 32px);
+  }
+
+  &.player-d1 {
+    @include stitches-sprite(0, -32px, 32px, 32px);
+  }
+
+  &.player-d2 {
+    @include stitches-sprite(0, -64px, 32px, 32px);
+  }
+
+  &.player-l0 {
+    @include stitches-sprite(0, -96px, 32px, 32px);
+  }
+
+  &.player-l1 {
+    @include stitches-sprite(0, -128px, 32px, 32px);
+  }
+
+  &.player-l2 {
+    @include stitches-sprite(0, -160px, 32px, 32px);
+  }
+
+  &.player-r0 {
+    @include stitches-sprite(0, -192px, 32px, 32px);
+  }
+
+  &.player-r1 {
+    @include stitches-sprite(0, -224px, 32px, 32px);
+  }
+
+  &.player-r2 {
+    @include stitches-sprite(0, -256px, 32px, 32px);
+  }
+
+  &.player-u0 {
+    @include stitches-sprite(0, -288px, 32px, 32px);
+  }
+
+  &.player-u1 {
+    @include stitches-sprite(0, -320px, 32px, 32px);
+  }
+
+  &.player-u2 {
+    @include stitches-sprite(0, -352px, 32px, 32px);
+  }
+}

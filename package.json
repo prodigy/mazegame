@@ -1,0 +1,24 @@
+{
+  "name": "git-mazegame",
+  "version": "1.0.0",
+  "description": "A maze game.",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^6.5.1",
+    "cssnano": "^3.7.7",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-if": "^2.0.1",
+    "gulp-postcss": "^6.2.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-sass-glob": "^1.0.6",
+    "gulp-sourcemaps": "^1.7.3",
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.7",
+    "jquery": "^3.1.1",
+    "merge-stream": "^1.0.0",
+    "normalize.css": "^5.0.0",
+    "postcss-import": "^8.1.2"
+  },
+  "author": "Sebastian Grunow <sebastian@grunow.ml>"
+}

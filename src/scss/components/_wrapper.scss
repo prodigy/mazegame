@@ -1,0 +1,14 @@
+#mazegame {
+  position: relative;
+}
+
+#tiles-wrapper, #entities-wrapper, #player-wrapper {
+  position: absolute;
+  top:0;
+  left:0;
+  width: $tileSize*$gameSize;
+  height: $tileSize*$gameSize;
+  max-width: $tileSize*$gameSize;
+  max-height: $tileSize*$gameSize;
+  line-height: 0;
+}
